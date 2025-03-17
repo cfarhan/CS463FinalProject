@@ -1,0 +1,53 @@
+    /* Define an aesthetic palette using CSS variables */
+    :root {
+        --primary-bg: #e2cfb5;          /* Base background */
+        --navbar-bg: #d1b393;           /* Darker shade for the navbar */
+        --section-bg-light: #e0d8cc;    /* Slightly darker beige for alternate sections */
+        --text-color: #5a463f;          /* Dark brown for body text */
+        --link-color: #8b5a2b;          /* Medium brown for link hover */
+      }
+      
+      body { 
+        background-color: var(--primary-bg);
+        padding-top: 70px;
+        color: var(--text-color);
+      }
+      
+      .navbar {
+        background-color: var(--navbar-bg) !important;
+      }
+      
+      .navbar-brand {
+        font-family: 'Great Vibes', cursive;
+        font-size: 2rem;
+        color: var(--text-color) !important;
+      }
+      
+      .navbar-nav .nav-link {
+        color: var(--text-color) !important;
+      }
+      
+      .bg-light {
+        background-color: var(--section-bg-light) !important;
+      }
+      
+      a.nav-link:hover {
+        color: var(--link-color) !important;
+      }
+      
+      section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      
+      /* Fixed image dimensions and styling */
+      .section-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      /* Circular style for the first image */
+      .circular {
+        border-radius: 50%;
+      }
