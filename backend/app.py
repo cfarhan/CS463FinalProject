@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+import os
 import requests
 
 app = Flask(__name__)
 
-GEMINI_API_KEY = "AIzaSyDclOtu0ERkZ6Z8AJxqxf0ty25r-1Z9DMs"
+load_dotenv()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + GEMINI_API_KEY
 
 @app.route('/')
@@ -38,4 +40,5 @@ def ask_gemini():
     return jsonify({"answer": answer})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
