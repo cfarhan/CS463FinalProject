@@ -10,8 +10,8 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + GEMINI_API_KEY
 
 @app.route('/')
-def default():
-    return "Hello, world"
+def home():
+    return render_template('index.html')
 
 @app.route('/question', methods=['POST'])
 def ask_gemini():
