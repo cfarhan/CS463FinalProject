@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import os
 import requests
 
 app = Flask(__name__)
+cors = CORS(app) # allow CORS for all domains on all routes.
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -42,4 +45,4 @@ def ask_gemini():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(debug=False, host='0.0.0.0', port=port)
+    flaskapp.run(debug=False, host='0.0.0.0', port=port)
