@@ -16,15 +16,6 @@ instance/
 *.pyc
 migrations/
 
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Frontend build
-/dist/
-/build/
-
 # VSCode
 .vscode/
 
@@ -32,26 +23,8 @@ yarn-error.log
 .DS_Store
 Thumbs.db
 
-# IDEs and editors
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Test/coverage files
-coverage/
-*.cover
-*.py,cover
-
-# Images cache
-images/cache/
-
 # Git
 *.orig
-
-# Temporary files
-*.swp
-*.bak
-*.tmp
 
 # Logs
 logs/

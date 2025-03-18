@@ -14,25 +14,25 @@
       }
       
       .navbar {
-        background-color: var(--navbar-bg) !important;
+        background-color: var(--navbar-bg);
       }
       
       .navbar-brand {
         font-family: 'Great Vibes', cursive;
         font-size: 2rem;
-        color: var(--text-color) !important;
+        color: var(--text-color);
       }
       
       .navbar-nav .nav-link {
-        color: var(--text-color) !important;
+        color: var(--text-color);
       }
       
       .bg-light {
-        background-color: var(--section-bg-light) !important;
+        background-color: var(--section-bg-light);
       }
       
       a.nav-link:hover {
-        color: var(--link-color) !important;
+        color: var(--link-color);
       }
       
       section {
